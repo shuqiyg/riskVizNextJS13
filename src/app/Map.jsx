@@ -11,7 +11,7 @@ function Map({ data }) {
         <MapContainer center={[data[0]["Lat"], data[0]["Long"]]} zoom={6}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {data.map((row, index) => (
-            <Marker key={index} position={[parseFloat(row["Lat"]), parseFloat(row["Long"])]}>
+            <Marker key={index} position={[parseFloat(row["Lat"]), parseFloat(row["Long"])]} >
               <Popup>{row["Asset Name"]}</Popup>
             </Marker>
           ))}
